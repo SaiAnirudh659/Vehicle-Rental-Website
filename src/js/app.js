@@ -23,4 +23,17 @@ app.controller('MainController', function($scope) {
             image: 'images/ev.jpg'
         }
     ];
+
+    // Modal Logic
+    $scope.isModalOpen = false;
+    $scope.selectedCategory = {};
+
+    $scope.openModal = function(category) {
+        $scope.selectedCategory = category;
+        $scope.isModalOpen = true;
+    };
+
+    $scope.closeModal = function() {
+        $scope.isModalOpen = false;
+    };
 });

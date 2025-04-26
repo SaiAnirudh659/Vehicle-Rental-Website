@@ -46,10 +46,21 @@
         <img ng-src="{{category.image}}" alt="{{category.name}}">
         <h3>{{category.name}}</h3>
         <p>{{category.description}}</p>
-        <button class="btn">View {{category.name}}</button>
+        <button class="btn" ng-click="openModal(category)">View {{category.name}}</button>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal" ng-show="isModalOpen">
+    <div class="modal-content">
+      <span class="close-btn" ng-click="closeModal()">&times;</span>
+      <img ng-src="{{selectedCategory.image}}" alt="{{selectedCategory.name}}">
+      <h2>{{selectedCategory.name}}</h2>
+      <p>{{selectedCategory.description}}</p>
+      <button class="btn">Rent This Vehicle</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>

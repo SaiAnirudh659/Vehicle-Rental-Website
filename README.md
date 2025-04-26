@@ -27,3 +27,7 @@ Users can browse available vehicles, view details, and book them for rental by f
 - Integrate with backend database (Firebase).
 - Add Payment Gateway.
 - Admin Panel to Add/Edit Vehicles.
+
+# 📂 Project Folder Structure
+
+![Folder Structure](src/docs/Vehicle_Rental_Folder_Structure.png)
