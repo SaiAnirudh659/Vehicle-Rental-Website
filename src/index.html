@@ -60,7 +60,7 @@
       <p>{{selectedCategory.description}}</p>
   
       <!-- Booking Form -->
-      <form class="booking-form">
+      <form class="booking-form" ng-submit="submitBooking($event)">
         <input type="text" placeholder="Your Name" required>
         <input type="tel" placeholder="Phone Number" required>
         <input type="date" required>

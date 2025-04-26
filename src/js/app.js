@@ -24,7 +24,6 @@ app.controller('MainController', function($scope) {
         }
     ];
 
-    // Modal Logic
     $scope.isModalOpen = false;
     $scope.selectedCategory = {};
 
@@ -34,6 +33,12 @@ app.controller('MainController', function($scope) {
     };
 
     $scope.closeModal = function() {
+        $scope.isModalOpen = false;
+    };
+
+    $scope.submitBooking = function(event) {
+        event.preventDefault();
+        alert("Thank you for booking! We'll contact you soon.");
         $scope.isModalOpen = false;
     };
 });
