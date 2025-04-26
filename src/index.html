@@ -52,13 +52,21 @@
   </section>
 
   <!-- Modal -->
-  <div class="modal" ng-show="isModalOpen">
+<div class="modal" ng-show="isModalOpen">
     <div class="modal-content">
       <span class="close-btn" ng-click="closeModal()">&times;</span>
       <img ng-src="{{selectedCategory.image}}" alt="{{selectedCategory.name}}">
       <h2>{{selectedCategory.name}}</h2>
       <p>{{selectedCategory.description}}</p>
-      <button class="btn">Rent This Vehicle</button>
+  
+      <!-- Booking Form -->
+      <form class="booking-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="date" required>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+  
     </div>
   </div>
 
