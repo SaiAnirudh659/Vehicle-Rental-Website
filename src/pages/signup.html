@@ -10,19 +10,27 @@
   
 </head>
 
-<body class="auth-body">
+<body class="auth-body" ng-app="vehicleRentalApp" ng-controller="SignupController">
 
-  <!-- Signup Form Container -->
-  <div class="auth-container">
-    <h2>Create Your Account</h2>
-    <form class="auth-form">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
-  </div>
-
-</body>
+    <div class="auth-container">
+      <h2>Create Your Account</h2>
+  
+      <form name="signupForm" ng-submit="submitSignup()" novalidate class="auth-form">
+        
+        <input type="text" name="name" ng-model="user.name" placeholder="Full Name" required>
+        <div class="error" ng-show="signupForm.name.$touched && signupForm.name.$invalid">Name is required.</div>
+  
+        <input type="email" name="email" ng-model="user.email" placeholder="Email Address" required>
+        <div class="error" ng-show="signupForm.email.$touched && signupForm.email.$invalid">Valid Email is required.</div>
+  
+        <input type="password" name="password" ng-model="user.password" placeholder="Password" required>
+        <div class="error" ng-show="signupForm.password.$touched && signupForm.password.$invalid">Password is required.</div>
+  
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+  
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  
+  </body>
 </html>

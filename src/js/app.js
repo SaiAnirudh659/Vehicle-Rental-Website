@@ -1,5 +1,6 @@
 var app = angular.module('vehicleRentalApp', []);
 
+// Main Controller (for Home Page + Booking Modal)
 app.controller('MainController', function($scope) {
     $scope.vehicleCategories = [
         {
@@ -24,6 +25,7 @@ app.controller('MainController', function($scope) {
         }
     ];
 
+    // Modal Logic
     $scope.isModalOpen = false;
     $scope.selectedCategory = {};
 
@@ -36,9 +38,25 @@ app.controller('MainController', function($scope) {
         $scope.isModalOpen = false;
     };
 
+    // Booking Form Submission
     $scope.submitBooking = function(event) {
         event.preventDefault();
         alert("Thank you for booking! We'll contact you soon.");
         $scope.isModalOpen = false;
+    };
+});
+
+// Signup Controller (for Signup Page Form Validation)
+app.controller('SignupController', function($scope) {
+    $scope.user = {};
+
+    $scope.submitSignup = function() {
+        if ($scope.signupForm.$valid) {
+            alert("Signup successful! Welcome " + $scope.user.name + " 🚀");
+            // Redirect to Login page after successful signup
+            window.location.href = "login.html"; 
+        } else {
+            alert("Please fill all required fields correctly!");
+        }
     };
 });

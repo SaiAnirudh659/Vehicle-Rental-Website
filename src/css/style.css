@@ -370,3 +370,12 @@
   color: #ffc75f;
   text-decoration: underline;
 }
+
+/* Form Validation Errors */
+.error {
+  color: #ff4b2b;
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  text-align: left;
+}
