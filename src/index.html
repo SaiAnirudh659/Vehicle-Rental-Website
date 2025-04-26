@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vehicleRentalApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Rental Booking Store</title>
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- JS Link -->
+  <script src="js/app.js" defer></script>
+</head>
+
+<body ng-controller="MainController">
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">🚗 Rent-A-Ride</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#vehicles">Vehicles</a></li>
+        <li><a href="#book">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Book Your Dream Ride Today! 🛣️</h1>
+    <p>Cars, Bikes, SUVs, and more at unbeatable rental prices.</p>
+    <a href="#vehicles" class="btn">Browse Vehicles</a>
+  </section>
+
+  <!-- Vehicle Categories Section -->
+  <section class="categories" id="vehicles">
+    <h2>Explore Vehicle Categories</h2>
+    <div class="category-grid">
+      <div class="category-card" ng-repeat="category in vehicleCategories">
+        <img ng-src="{{category.image}}" alt="{{category.name}}">
+        <h3>{{category.name}}</h3>
+        <p>{{category.description}}</p>
+        <button class="btn">View {{category.name}}</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rent-A-Ride. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
