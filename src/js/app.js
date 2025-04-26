@@ -60,3 +60,18 @@ app.controller('SignupController', function($scope) {
         }
     };
 });
+
+// Login Controller (for Login Page Validation)
+app.controller('LoginController', function($scope) {
+    $scope.user = {};
+
+    $scope.submitLogin = function() {
+        if ($scope.loginForm.$valid) {
+            alert("Login successful! Welcome back 🚀");
+            // Redirect to Home page after successful login
+            window.location.href = "../index.html"; 
+        } else {
+            alert("Please fill all required fields correctly!");
+        }
+    };
+});

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vehicleRentalApp" ng-controller="LoginController">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Rent-A-Ride</title>
+
+  <!-- Link to Main CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="auth-body">
+
+  <!-- Login Form Container -->
+  <div class="auth-container slide-in">
+    <h2>Welcome Back</h2>
+
+    <form name="loginForm" ng-submit="submitLogin()" novalidate class="auth-form">
+      
+      <input type="email" name="email" ng-model="user.email" placeholder="Email Address" required>
+      <div class="error" ng-show="loginForm.email.$touched && loginForm.email.$invalid">Valid Email is required.</div>
+
+      <input type="password" name="password" ng-model="user.password" placeholder="Password" required>
+      <div class="error" ng-show="loginForm.password.$touched && loginForm.password.$invalid">Password is required.</div>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+
+</body>
+</html>
