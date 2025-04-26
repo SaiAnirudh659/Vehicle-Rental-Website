@@ -42,6 +42,7 @@
   
   /* Hero Section */
   .hero {
+    position: relative;
     height: 90vh;
     background: url('../images/luxury-car.jpg') no-repeat center center/cover;
     color: white;
@@ -51,11 +52,25 @@
     align-items: center;
     text-align: center;
     padding-top: 120px;
+    overflow: hidden;
   }
   
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% black transparent overlay */
+    z-index: 1;
+  }
+  
+  .hero h1, 
+  .hero p, 
+  .hero .btn {
+    position: relative;
+    z-index: 2;
   }
   
   .hero p {
