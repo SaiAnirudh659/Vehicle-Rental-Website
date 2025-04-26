@@ -292,3 +292,81 @@
       transform: translateY(5px);
     }
   }
+
+  /* Auth Pages (Signup/Login) */
+.auth-body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff4b2b, #ff6f50, #ff9671, #ffc75f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border: 2px solid #ff4b2b;
+}
+
+.auth-form .btn {
+  background: #ff4b2b;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form .btn:hover {
+  background: #ff6f50;
+}
+
+.auth-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-container a {
+  color: #ffc75f;
+  text-decoration: underline;
+}
